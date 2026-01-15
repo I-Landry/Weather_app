@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body
+    class="flex justify-center align-middle p-4 rounded-2xl bg-[linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url('/images/k-mitch-hodge-14KNdf70poU-unsplash.jpg')] bg-bottom bg-no-repeat bg-fixed bg-cover h-full sm:p-10"
+  >
+    <div
+      class="container h-full border-2 border-cyan-200 shadow-[inset_0_0_10px_rgb(0,128,128)] backdrop-blur-md rounded-4xl max-w-140"
+    >
+      <div class="card h-full">
+        <div class="search">
+          <h1
+            class="text-5xl sm:text-6xl m-5 mt-7 mb-10 text-center text-cyan-300"
+          >
+            Weather-App
+          </h1>
+          <div class="flex justify-start items-center">
+            <input
+              class="bg-gray-500 w-[70%] m-6 ml-8 p-[0.3rem_1rem] sm:p-[0.8rem_1.5rem] shadow-[inset_0_0_10px_rgba(255,255,255)] rounded-[4rem] text-2xl text-cyan-300 focus:shadow-[0_0_10px_rgba(255,255,255)] focus:border-2 border-cyan-200 outline-none"
+              type="search"
+              placeholder="enter your city name ..."
+              autofocus
+            />
+            <button
+              class="search-btn outline-none bg-gray-400 shadow-[inset_0_0_8px_rgba(100,255,255,0.9)] p-2 sm:p-[0.7rem] rounded-[50%] hover:cursor-pointer hover:shadow-[0_0_8px_rgba(100,255,255,0.9)] hover:bg-gray-500"
+            >
+              <img
+                class="w-5 h-5 sm:w-8 sm:h-8 object-fill object- text-center"
+                src="/images/search.png"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="error hidden ml-10 mb-4 text-red-800 text-xl sm:text-3xl">
+          <p>Invalid City Name</p>
+        </div>
+        <div class="details hidden justify-center flex-col items-center">
+          <img class="sky w-30 h-30 mb-4" src="/images/snow.png" alt="" />
+          <h1 class="temperature text-amber-100 text-3xl sm:text-5xl mb-4">
+            20 &degC
+          </h1>
+          <h2 class="city text-amber-100 text-3xl sm:text-5xl mt-0.8 mb-6">
+            Bujumbura
+          </h2>
+          <div
+            class="info flex justify-between items-center p-2 mt-1 min-w-9/12 mb-10"
+          >
+            <div class="flex items-center">
+              <img class="w-8 h-8 sm:w-10 sm:h-10" src="/images/humidity.png" />
+              <h3 class="ml-3 text-md sm:text-lg text-cyan-200">
+                <span class="humidity">48%</span> <br />Humidity
+              </h3>
+            </div>
+            <div class="flex items-center mb-4 ml-4">
+              <img class="w-8 h-8 sm:w-10 sm:h-10" src="/images/wind.png" />
+              <h3 class="ml-3 text-md sm:text-lg text-cyan-200">
+                <span class="wind">20.3 km/h</span> <br />Wind Speed
+              </h3>
+              <h3></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
