@@ -14,7 +14,7 @@ const error = document.querySelector(".error");
 
 async function checkWeather(cityname) {
   const response = await fetch(
-    url + cityname + `&appid=${apiKey}&units=metric`
+    url + cityname + `&appid=${apiKey}&units=metric`,
   );
 
   if (response.status === 404) {
@@ -59,13 +59,16 @@ async function checkWeather(cityname) {
   hidden.classList.add("flex");
 }
 const searchBox = document.querySelector(".search input");
+// const isUndefined = searchBox.value.trim();
 searchBtn.addEventListener("click", () => {
-  checkWeather(searchBox.value);
-  searchBox.value = "";
+  if (searchBox.value != "") {
+    checkWeather(searchBox.value);
+    searchBox.value = "";
+  }
 });
 
 searchBox.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
+  if (e.key === "Enter" && searchBox.value != "") {
     checkWeather(searchBox.value.trim());
     searchBox.value = "";
   }
